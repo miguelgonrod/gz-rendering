@@ -24,6 +24,7 @@
 #include "gz/rendering/config.hh"
 #include "gz/rendering/RenderEngine.hh"
 #include "gz/rendering/RenderingIface.hh"
+#include <gz/utils/ExtraTestMacros.hh>
 
 using namespace gz;
 using namespace rendering;
@@ -59,7 +60,7 @@ unsigned int defaultEnginesForTest()
 }
 
 /////////////////////////////////////////////////
-TEST(RenderingIfaceTest, HasEngine)
+TEST(RenderingIfaceTest, IGN_UTILS_TEST_DISABLED_ON_WIN32(HasEngine))
 {
   unsigned int count = defaultEnginesForTest();
   EXPECT_EQ(count, engineCount());
@@ -70,7 +71,7 @@ TEST(RenderingIfaceTest, HasEngine)
 }
 
 /////////////////////////////////////////////////
-TEST(RenderingIfaceTest, GetEngine)
+TEST(RenderingIfaceTest, IGN_UTILS_TEST_DISABLED_ON_WIN32(GetEngine))
 {
   common::Console::SetVerbosity(4);
   auto [envEngine, envBackend, envHeadless] = GetTestParams();
@@ -113,7 +114,7 @@ TEST(RenderingIfaceTest, GetEngine)
 }
 
 /////////////////////////////////////////////////
-TEST(RenderingIfaceTest, RegisterEngine)
+TEST(RenderingIfaceTest, IGN_UTILS_TEST_DISABLED_ON_WIN32(RegisterEngine))
 {
   common::Console::SetVerbosity(4);
 
